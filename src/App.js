@@ -1,11 +1,19 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import GetAll from "./components/Card"
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold text-pink-500">Hello world!</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<GetAll/>}/>
+    </Routes>
+    </BrowserRouter>
+  
   );
 }
+
+
 
 export default App;
