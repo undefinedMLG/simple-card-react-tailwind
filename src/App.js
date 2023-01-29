@@ -1,11 +1,23 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Card from "./components/Card";
+import GetAll from "./components/GetAll";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold text-pink-500">Hello world!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<GetAll />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/card" element={<Card />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
+
+
 
 export default App;
