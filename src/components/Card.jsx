@@ -6,7 +6,7 @@ const Card = () => {
       <figure className="relative">
         <img
           className="w-full max-h-36"
-          src="http://dummyimage.com/200x200.png/ff4444/ffffff"
+          src="http://dummyimage.com/200x200.png/ff4444/ffffff" alt=""
         />
       </figure>
       <div className="pt-4 pb-3 px-3">
