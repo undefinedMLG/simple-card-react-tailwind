@@ -113,7 +113,7 @@ const GetAll = () => {
                     <h3 className="text-xl font-bold">{item.name}</h3>
                     <p>{item.description.slice(0, 50)}...</p>
                     <h4>{item.price}</h4>
-                    <Link to={`/${item.id}`}>Detail</Link>
+                    <Link to={`/detail/${item.id}`}>Detail</Link>
                   </div>
                   <br />
                   <br />
@@ -123,7 +123,7 @@ const GetAll = () => {
                 <div key={index}>
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
-                  <Link to={`/${item.id}`}>Detail</Link>
+                  <Link to={`/detail/${item.id}`}>Detail</Link>
                   <br />
                   <br />
                 </div>
