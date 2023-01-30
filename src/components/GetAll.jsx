@@ -6,6 +6,7 @@ const GetAll = () => {
   const [datas, setDatas] = useState([]);
   const [keyword, setKeyword] = useState("");
   const [filteredData, setFiltered] = useState([]);
+  const [keyFilter, setKeyFilter] = useState("");
 
   const fetchGetAll = () => {
     fetch(
@@ -21,7 +22,12 @@ const GetAll = () => {
 
   useEffect(() => {
     filterData();
-  }, [keyword, datas]);
+  }, [ datas, keyword]);
+
+  useEffect(() => {
+    selectFilter();
+  }, [ datas, keyFilter]);
+
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -30,7 +36,7 @@ const GetAll = () => {
     });
     setFiltered(filteredData);
   };
-  
+
   const filterData = () => {
     const filteredData = datas.filter((e) => {
       return e.name.toLowerCase().includes(keyword.toLowerCase());
@@ -38,7 +44,13 @@ const GetAll = () => {
     setFiltered(filteredData);
   };
 
-
+  const selectFilter = (e) =>{
+    console.log(keyFilter);
+    const filteredData = datas.filter((e) => {
+      return e.category.toLowerCase().includes(keyFilter.toLowerCase());
+    });
+    setFiltered(filteredData);
+  }
 
   return (
     <React.Fragment>
@@ -52,8 +64,16 @@ const GetAll = () => {
                   value={keyword}
                   onChange={(e) => setKeyword(e.target.value)}
                   placeholder="Search product"
-                  class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
-                  />
+                  class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                />
+              </form>
+              <form onChange={selectFilter} className="w-full">
+                <select value={keyFilter} onChange={(e) => setKeyFilter(e.target.value)}>
+                  <option value="#">select filter</option>
+                  <option value="Pre-Order">Pre-Order</option>
+                  <option value="Ready">Ready</option>
+                  <option value="Barang Bekas">Barang bekas</option>
+                </select>
               </form>
             </div>
           </div>
@@ -68,8 +88,11 @@ const GetAll = () => {
         </form> */}
         <div className="card-wrap flex flex-wrap gap-5 justify-center">
           {filteredData
-            ? (filteredData.map((item, index) => (
-                <div key={index} className="bg-blue-300 xl:w-1/5 xs:w-2/5 h-56 p-4" >
+            ? filteredData.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-blue-300 xl:w-1/5 xs:w-2/5 h-56 p-4"
+                >
                   {/* <figure className="w-full">
                     <img src={item.image} className="h-40 w-full" />
                   </figure> */}
@@ -82,20 +105,17 @@ const GetAll = () => {
                   <br />
                   <br />
                 </div>
-              )))
-            :(
-                datas.map((item, index) => (
-                    <div key={index}>
-                      <h3>{item.name}</h3>
-                      <p>{item.description}</p>
-                      <Link to={`/${item.id}`}>Detail</Link>
-                      <br />
-                      <br />
-                    </div>
-                  ))
-                ) 
-            }
-          </div>
+              ))
+            : datas.map((item, index) => (
+                <div key={index}>
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                  <Link to={`/${item.id}`}>Detail</Link>
+                  <br />
+                  <br />
+                </div>
+              ))}
+        </div>
       </div>
     </React.Fragment>
   );
