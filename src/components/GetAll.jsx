@@ -22,12 +22,11 @@ const GetAll = () => {
 
   useEffect(() => {
     filterData();
-  }, [ datas, keyword]);
+  }, [datas, keyword]);
 
   useEffect(() => {
     selectFilter();
-  }, [ datas, keyFilter]);
-
+  }, [datas, keyFilter]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -44,12 +43,21 @@ const GetAll = () => {
     setFiltered(filteredData);
   };
 
-  const selectFilter = (e) =>{
+  const selectFilter = (e) => {
     console.log(keyFilter);
     const filteredData = datas.filter((e) => {
       return e.category.toLowerCase().includes(keyFilter.toLowerCase());
     });
     setFiltered(filteredData);
+    console.log(filteredData.length);
+  };
+
+  function getFiltered(filtered) {
+    if(filtered === 0) {
+      return 'Barang tidak ada'
+    } else {
+      return filtered;
+    }
   }
 
   return (
@@ -68,7 +76,10 @@ const GetAll = () => {
                 />
               </form>
               <form onChange={selectFilter} className="w-full">
-                <select value={keyFilter} onChange={(e) => setKeyFilter(e.target.value)}>
+                <select
+                  value={keyFilter}
+                  onChange={(e) => setKeyFilter(e.target.value)}
+                >
                   <option value="#">select filter</option>
                   <option value="Pre-Order">Pre-Order</option>
                   <option value="Ready">Ready</option>
@@ -87,6 +98,8 @@ const GetAll = () => {
           />
         </form> */}
         <div className="card-wrap flex flex-wrap gap-5 justify-center">
+          {getFiltered(filteredData.length)}
+
           {filteredData
             ? filteredData.map((item, index) => (
                 <div
