@@ -1,12 +1,6 @@
 # UNDEFINED
 Ujian Praktik Chapter 2
 
-## Team
-- Prayoga Adi Setyawann [@setyawann](https://www.github.com/setyawannn)
-- Reyhan Marsalino Diansa [@ReyhanDiansa](https://www.github.com/ReyhanDiansa)
-- Zhidan Marties Alfareza [@lakyulakyu](https://www.github.com/lakyulakyu)
-- Zaskia Rizky Raichand [@Kiaaa22](https://www.github.com/Kiaaa22)
-
 ## Technology
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -21,3 +15,18 @@ Ujian Praktik Chapter 2
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Features
+
+
+## Team
+- Prayoga Adi Setyawann [@setyawann](https://www.github.com/setyawannn)
+- Reyhan Marsalino Diansa [@ReyhanDiansa](https://www.github.com/ReyhanDiansa)
+- Zhidan Marties Alfareza [@lakyulakyu](https://www.github.com/lakyulakyu)
+- Zaskia Rizky Raichand [@Kiaaa22](https://www.github.com/Kiaaa22)
+
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: white)" srcset="https://github.com/setyawannn/TEFA_team-portfolio/blob/main/assets/images/logo-icon.png?raw=true">
+      <img src="https://github.com/setyawannn/TEFA_team-portfolio/blob/main/assets/images/logo-icon.png?raw=true" height="128">
+    </picture>
+    <h1 align="center" ">UNDEFINED</h1>
+</p>
