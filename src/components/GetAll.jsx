@@ -44,31 +44,18 @@ const GetAll = () => {
   };
 
   const selectFilter = (e) => {
-<<<<<<< HEAD
     if (filteredData.length > 0) {
-=======
-
-    if (filteredData.length>0) {
->>>>>>> 041b8bed1fcc782dd944f2225ce315002aadf143
       const filterData = filteredData.filter((e) => {
         return e.category.toLowerCase().includes(keyFilter.toLowerCase());
       });
       setFiltered(filterData);
       setKeyword("");
-<<<<<<< HEAD
     } else if (filteredData.length === 0) {
-=======
-    }else if(filteredData.length===0){
->>>>>>> 041b8bed1fcc782dd944f2225ce315002aadf143
       const filterData = datas.filter((e) => {
         return e.category.toLowerCase().includes(keyFilter.toLowerCase());
       });
       setFiltered(filterData);
-<<<<<<< HEAD
       setKeyword("");
-=======
-      setKeyword("")
->>>>>>> 041b8bed1fcc782dd944f2225ce315002aadf143
     }
     console.log(filteredData.length);
   };
