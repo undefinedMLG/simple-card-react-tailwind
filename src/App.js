@@ -6,6 +6,7 @@ import GetAll from "./components/GetAll";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import Products2 from "./pages/Products2";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/card" element={<Card />} />
+          <Route path="/testing" element={<Products2 />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>
