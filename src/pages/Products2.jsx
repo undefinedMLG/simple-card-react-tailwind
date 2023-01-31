@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Card from "../components/Card";
+import NavFo from "../layouts/NavFo";
 
 //FETCH API GET ALL DATA
-const GetAll = () => {
+const Products2 = () => {
   const [datas, setDatas] = useState([]);
   const [keyword, setKeyword] = useState("");
   const [filteredData, setFiltered] = useState([]);
@@ -15,6 +17,14 @@ const GetAll = () => {
       .then((res) => res.json())
       .then((json) => setDatas(json));
   };
+
+  // Get Keyword from localstorage
+  useEffect(() => {
+    const storedKeyword = localStorage.getItem("keyword");
+    if (storedKeyword) {
+      setKeyword(storedKeyword);
+    }
+  });
 
   useEffect(() => {
     fetchGetAll();
@@ -69,16 +79,16 @@ const GetAll = () => {
   }
 
   return (
-    <React.Fragment>
-      <div className="container xl:w-10/12 mx-auto my-8">
-        <div class="flex justify-center">
-          <div class="mb-3 xl:w-96">
+    <NavFo>
+      <div className="container w-11/12 lg:w-9/12 my-0 mx-auto pb-16">
+        <div class="search-content flex justify-between">
+          <div class="result-count text-left mb-4">
             <div class="input-group relative flex items-stretch w-full mb-4">
               <form onSubmit={handleSearch} className="w-full">
                 <input
                   type="text"
                   value={keyword}
-                  onChange={(e) => setKeyword(e.target.value)}
+                  // onChange={(e) => setKeyword(e.target.value)}
                   placeholder="Search product"
                   class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 />
@@ -97,49 +107,35 @@ const GetAll = () => {
             </div>
           </div>
         </div>
-        {/* <form onSubmit={handleSearch}>
-          <input
-            type="text"
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-          placeholder="searching disini"
-          />
-        </form> */}
-        <div className="card-wrap flex flex-wrap gap-5 justify-center">
-          {getFiltered(filteredData.length)}
-
+        {getFiltered(filteredData.length)}
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
           {filteredData
             ? filteredData.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-blue-300 xl:w-1/5 xs:w-2/5 h-56 p-4"
-                >
-                  {/* <figure className="w-full">
-                    <img src={item.image} className="h-40 w-full" />
-                  </figure> */}
-                  <div className="card-contents">
-                    <h3 className="text-xl font-bold">{item.name}</h3>
-                    <p>{item.description.slice(0, 50)}...</p>
-                    <h4>{item.price}</h4>
-                    <Link to={`/${item.id}`}>Detail</Link>
-                  </div>
-                  <br />
-                  <br />
+                <div key={index}>
+                  <Card
+                    category={item.category}
+                    name={item.name}
+                    desc={item.description}
+                    price={item.price}
+                    id={item.id}
+                  />
                 </div>
               ))
             : datas.map((item, index) => (
                 <div key={index}>
-                  <h3>{item.name}</h3>
-                  <p>{item.description}</p>
-                  <Link to={`/${item.id}`}>Detail</Link>
-                  <br />
-                  <br />
+                  <Card
+                    category={item.category}
+                    name={item.name}
+                    desc={item.description}
+                    price={item.price}
+                    id={item.id}
+                  />
                 </div>
               ))}
         </div>
       </div>
-    </React.Fragment>
+    </NavFo>
   );
 };
 
-export default GetAll;
+export default Products2;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MoonIcon from "../assets/icons/MoonIcon";
 import SearchIcon from "../assets/icons/SearchIcon";
@@ -6,7 +7,14 @@ import SunIcon from "../assets/icons/SunIcon";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [keyword, setKeyword] = useState("");
   const currentPath = useLocation().pathname;
+
+  useEffect(() => {
+    localStorage.setItem("keyword", keyword);
+  }, [keyword]);
+
+  console.log(keyword);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -70,6 +78,7 @@ const Navbar = () => {
               </button>
             </span>
             <input
+              onChange={(e) => setKeyword(e.target.value)}
               type="search"
               name="Search"
               placeholder="Search..."

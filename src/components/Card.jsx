@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="max-w-lg p-5 rounded-md bg-white shadow-lg dark:bg-gray-900 dark:text-gray-100">
       <div className="space-y-4 w-full">
@@ -11,29 +12,29 @@ const Card = () => {
             className="block object-cover object-center w-full max-h-36 rounded-md h-72 dark:bg-gray-500"
           />
           <div className="flex items-center text-xs">
-            <span>Pre-Order</span>
+            <span>{props.category}</span>
           </div>
         </div>
         <div className="space-y-2">
           <a rel="noopener noreferrer" href="#" className="block">
             <h3 className="text-xl font-semibold dark:text-violet-400">
-              Facere - ipsa nulla
+              {props.name}
             </h3>
           </a>
           <p className="leading-snug dark:text-gray-400">
-            Lorem ipsum dolor sit amet consectetur
+            {props.desc.slice(0, 40) + "..."}
           </p>
           <p className="leading-snug dark:text-gray-300 font-semibold text-base">
-            Rp 86.000
+            {"Rp " + props.price}
           </p>
         </div>
         <div className="space-y-2 w-full">
-          <a
-            href=""
+          <Link
+            to={`/detail/${props.id}`}
             className="inline-block text-base w-full py-2 text-center font-medium bg-black hover:bg-neutral-800 text-white rounded-sm dark:bg-violet-400 dark:hover:bg-violet-500 transition "
           >
             Detail
-          </a>
+          </Link>
         </div>
       </div>
     </div>
