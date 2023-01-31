@@ -97,14 +97,6 @@ const GetAll = () => {
             </div>
           </div>
         </div>
-        {/* <form onSubmit={handleSearch}>
-          <input
-            type="text"
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-          placeholder="searching disini"
-          />
-        </form> */}
         <div className="card-wrap flex flex-wrap gap-5 justify-center">
           {getFiltered(filteredData.length)}
 
