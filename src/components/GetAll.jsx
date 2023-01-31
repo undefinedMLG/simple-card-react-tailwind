@@ -62,8 +62,8 @@ const GetAll = () => {
   };
 
   function getFiltered(filtered) {
-    if(filtered === 0) {
-      return 'Barang tidak ada'
+    if (filtered === 0) {
+      return "Barang tidak ada";
     } else {
       return filtered;
     }
@@ -89,7 +89,7 @@ const GetAll = () => {
                   value={keyFilter}
                   onChange={(e) => setKeyFilter(e.target.value)}
                 >
-                  <option value="#">select filter</option>
+                  <option value="">All</option>
                   <option value="Pre-Order">Pre-Order</option>
                   <option value="Ready">Ready</option>
                   <option value="Barang Bekas">Barang bekas</option>
