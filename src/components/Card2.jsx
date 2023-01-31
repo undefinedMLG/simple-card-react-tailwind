@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = () => {
+const Card2 = () => {
   return (
     <div className="max-w-lg p-5 rounded-md bg-white shadow-lg dark:bg-gray-900 dark:text-gray-100">
       <div className="space-y-4 w-full">
@@ -40,4 +40,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default Card2;

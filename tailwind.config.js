@@ -2,10 +2,11 @@
 module.exports = {
   mode: 'jit',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: ['class'],
   theme: {
     extend: {
       colors: {
-        salmon: 'salmon'
+        "whitesmoke": "#f6f6f6",
       }
     },
   },
