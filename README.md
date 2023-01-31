@@ -1,4 +1,4 @@
-# UNDEFIND
+# UNDEFINED
 Ujian Praktik Chapter 2
 
 ## Team
