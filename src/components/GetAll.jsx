@@ -44,11 +44,20 @@ const GetAll = () => {
   };
 
   const selectFilter = (e) => {
-    console.log(keyFilter);
-    const filteredData = datas.filter((e) => {
-      return e.category.toLowerCase().includes(keyFilter.toLowerCase());
-    });
-    setFiltered(filteredData);
+
+    if (filteredData.length>0) {
+      const filterData = filteredData.filter((e) => {
+        return e.category.toLowerCase().includes(keyFilter.toLowerCase());
+      });
+      setFiltered(filterData);
+      setKeyword("");
+    }else if(filteredData.length===0){
+      const filterData = datas.filter((e) => {
+        return e.category.toLowerCase().includes(keyFilter.toLowerCase());
+      });
+      setFiltered(filterData);
+      setKeyword("")
+    }
     console.log(filteredData.length);
   };
 
@@ -89,14 +98,6 @@ const GetAll = () => {
             </div>
           </div>
         </div>
-        {/* <form onSubmit={handleSearch}>
-          <input
-            type="text"
-            value={keyword}
-            onChange={(e) => setKeyword(e.target.value)}
-          placeholder="searching disini"
-          />
-        </form> */}
         <div className="card-wrap flex flex-wrap gap-5 justify-center">
           {getFiltered(filteredData.length)}
 
