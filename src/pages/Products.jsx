@@ -25,11 +25,14 @@ const Products = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card
+              img={"https://source.unsplash.com/random/480x360/?4"}
+              category="Pre-Order"
+              name="Chocolate - apayah"
+              desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, temporibus!"
+              price={82000}
+              id={10000}
+            />
           </div>
         </div>
       </NavFo>
