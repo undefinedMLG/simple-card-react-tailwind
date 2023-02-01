@@ -18,14 +18,6 @@ const Products2 = () => {
       .then((json) => setDatas(json));
   };
 
-  // Get Keyword from localstorage
-  useEffect(() => {
-    const storedKeyword = localStorage.getItem("keyword");
-    if (storedKeyword) {
-      setKeyword(storedKeyword);
-    }
-  });
-
   useEffect(() => {
     fetchGetAll();
   }, []);
@@ -74,7 +66,7 @@ const Products2 = () => {
     if (filtered === 0) {
       return "Barang tidak ada";
     } else {
-      return filtered;
+      return filtered+" Products found";
     }
   }
 
@@ -88,7 +80,7 @@ const Products2 = () => {
                 <input
                   type="text"
                   value={keyword}
-                  // onChange={(e) => setKeyword(e.target.value)}
+                  onChange={(e) => setKeyword(e.target.value)}
                   placeholder="Search product"
                   class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                 />
@@ -107,12 +99,18 @@ const Products2 = () => {
             </div>
           </div>
         </div>
-        {getFiltered(filteredData.length)}
+        <div className="result-count text-left mb-4">
+              <p className="text-lg md:text-xl font-semibold dark:text-gray-300">
+              {getFiltered(filteredData.length)} 
+              </p>
+            </div>
+        
         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
           {filteredData
             ? filteredData.map((item, index) => (
                 <div key={index}>
                   <Card
+                    img={"https://source.unsplash.com/random/480x360/?4"}
                     category={item.category}
                     name={item.name}
                     desc={item.description}

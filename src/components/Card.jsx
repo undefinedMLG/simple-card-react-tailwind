@@ -7,7 +7,7 @@ const Card = (props) => {
       <div className="space-y-4 w-full">
         <div className="space-y-2">
           <img
-            src="https://source.unsplash.com/random/480x360/?4"
+            src={props.img}
             alt=""
             className="block object-cover object-center w-full max-h-36 rounded-md h-72 dark:bg-gray-500"
           />
