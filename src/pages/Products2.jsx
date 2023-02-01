@@ -66,7 +66,7 @@ const Products2 = () => {
     if (filtered === 0) {
       return "Barang tidak ada";
     } else {
-      return filtered;
+      return filtered+" Products found";
     }
   }
 
@@ -99,7 +99,12 @@ const Products2 = () => {
             </div>
           </div>
         </div>
-        {getFiltered(filteredData.length)}
+        <div className="result-count text-left mb-4">
+              <p className="text-lg md:text-xl font-semibold dark:text-gray-300">
+              {getFiltered(filteredData.length)} 
+              </p>
+            </div>
+        
         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
           {filteredData
             ? filteredData.map((item, index) => (

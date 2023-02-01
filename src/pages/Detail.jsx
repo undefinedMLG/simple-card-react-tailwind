@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Detail() {
-    const [datas, setDatas] = useState([]);
-    const [detail, setDetail] = useState([]);
-    const { id_barang } = useParams();
+  const [datas, setDatas] = useState([]);
+  const [detail, setDetail] = useState([]);
+  const { id_barang } = useParams();
 
   const fetchGetAll = () => {
     fetch(
@@ -15,8 +15,8 @@ function Detail() {
   };
 
   useEffect(() => {
-      fetchGetAll();
-    }, []);
+    fetchGetAll();
+  }, []);
   console.log(datas);
   console.log(id_barang);
 
@@ -33,28 +33,38 @@ function Detail() {
 
   function ExpiryDate(expirate) {
     return (
-      <div>
-        { expirate === null ? (
-          <p>tidak ada</p>
+      <>
+        {expirate === null ? (
+          <p>Expirate Date: tidak ada</p>
         ) : (
-          <p>{expirate}</p>
-        ) }
-      </div>
+          <p>Expirate Date: {expirate}</p>
+        )}
+      </>
     );
   }
 
   console.log(detail);
   return (
-      <div>
-       {detail.map((item, index) => (
-        <> 
-        <p>{item.name}</p>
-        <p>{item.price}</p>
-        <p>{item.description}</p>
-        <p>{item.category}</p>
-        <p>{ExpiryDate(item.expiryDate)}</p>
-        </>
-       ))}
+    <div className="detail-wrap w-full flex justify-center">
+      <div className="text-center mt-5 w-1/2">
+        {detail.map((item, index) => (
+          <>
+            <p className="font-bold">{item.name}</p>
+            <p>Price: {item.price}</p>
+            <p>Description: {item.description}</p>
+            <p>Category: {item.category}</p>
+            {ExpiryDate(item.expiryDate)}
+            <br />
+            <Link
+              to={"/home"}
+              rel="noopener noreferrer"
+              className="px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900 hover:underline"
+            >
+              Back to homepage
+            </Link>
+          </>
+        ))}
+      </div>
     </div>
   );
 }
