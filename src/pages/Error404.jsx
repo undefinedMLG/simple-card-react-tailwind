@@ -16,7 +16,7 @@ const Error404 = () => {
             But dont worry, you can find plenty of other things on our homepage.
           </p>
           <Link
-            to={"/home"}
+            to={"/"}
             rel="noopener noreferrer"
             className="px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-gray-900 hover:underline"
           >

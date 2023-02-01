@@ -72,22 +72,22 @@ const Products = () => {
   return (
     <NavFo>
       <div className="container w-11/12 lg:w-9/12 my-0 mx-auto pb-16">
-        <div class="search-content flex justify-between">
-          <div class="result-count text-left mb-4">
-            <div class="input-group relative flex items-stretch w-full mb-4">
-              <form onSubmit={handleSearch} className="w-full">
+        <div class="search-content w-full flex justify-between">
+            <div class="input-group flex justify-between w-full mb-4">
+              <form onSubmit={handleSearch} className="w-72">
                 <input
                   type="text"
                   value={keyword}
                   onChange={(e) => setKeyword(e.target.value)}
                   placeholder="Search product"
-                  class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none dark:bg-gray-900 dark:text-gray-200 dark:border-gray-900"
                 />
               </form>
-              <form onChange={selectFilter} className="w-full">
+              <form onChange={selectFilter} className="w-40">
                 <select
                   value={keyFilter}
                   onChange={(e) => setKeyFilter(e.target.value)}
+                  className="p-2 w-full rounded dark:bg-gray-900 dark:text-gray-200" 
                 >
                   <option value="">All</option>
                   <option value="Pre-Order">Pre-Order</option>
@@ -96,7 +96,6 @@ const Products = () => {
                 </select>
               </form>
             </div>
-          </div>
         </div>
         <div className="result-count text-left mb-4">
               <p className="text-lg md:text-xl font-semibold dark:text-gray-300">
