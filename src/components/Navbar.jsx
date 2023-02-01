@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <header className="p-4 bg-whitesmoke dark:bg-gray-800 dark:text-gray-100 mb-6 dark:shadow-md">
       <div className="container flex justify-between h-16 w-11/12 my-0 mx-auto">
-        <ul className="items-stretch hidden space-x-3 lg:flex">
+        <ul className="items-stretch flex space-x-3 lg:flex">
           <li className="flex">
             <Link
               to={"/"}
@@ -52,7 +52,7 @@ const Navbar = () => {
           aria-label="Back to homepage"
           className="flex items-center p-2"
         >
-          <h1 className="text-2xl text-black font-bold tracking-wide dark:text-gray-200">
+          <h1 className="hidden sm:block text-2xl text-black font-bold tracking-wide dark:text-gray-200">
             UNDEFINED
           </h1>
         </a>

@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
+  function convertToRupiah(price) {
+    return "Rp. " + price.toLocaleString("id-ID");
+  }
+
   return (
     <div className="max-w-lg p-5 rounded-md bg-white shadow-lg dark:bg-gray-900 dark:text-gray-100">
       <div className="space-y-4 w-full">
@@ -25,7 +29,7 @@ const Card = (props) => {
             {props.desc.slice(0, 40) + "..."}
           </p>
           <p className="leading-snug dark:text-gray-300 font-semibold text-base">
-            {"Rp " + props.price}
+            {convertToRupiah(props.price)}
           </p>
         </div>
         <div className="space-y-2 w-full">
