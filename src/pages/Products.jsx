@@ -11,8 +11,7 @@ const Products = () => {
   const [keyFilter, setKeyFilter] = useState("");
 
   const fetchGetAll = () => {
-    fetch(
-      process.env.REACT_APP_API_KEY    )
+    fetch(process.env.REACT_APP_API_KEY)
       .then((res) => res.json())
       .then((json) => setDatas(json));
   };
@@ -65,7 +64,7 @@ const Products = () => {
     if (filtered === 0) {
       return "Barang tidak ada";
     } else {
-      return filtered+" Products found";
+      return filtered + " Products found";
     }
   }
 
@@ -73,36 +72,36 @@ const Products = () => {
     <NavFo>
       <div className="container w-11/12 lg:w-9/12 my-0 mx-auto pb-16">
         <div class="search-content w-full flex justify-between">
-            <div class="input-group flex justify-between w-full mb-4">
-              <form onSubmit={handleSearch} className="w-72">
-                <input
-                  type="text"
-                  value={keyword}
-                  onChange={(e) => setKeyword(e.target.value)}
-                  placeholder="Search product"
-                  className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none dark:bg-gray-900 dark:text-gray-200 dark:border-gray-900"
-                />
-              </form>
-              <form onChange={selectFilter} className="w-40">
-                <select
-                  value={keyFilter}
-                  onChange={(e) => setKeyFilter(e.target.value)}
-                  className="p-2 w-full rounded dark:bg-gray-900 dark:text-gray-200" 
-                >
-                  <option value="">All</option>
-                  <option value="Pre-Order">Pre-Order</option>
-                  <option value="Ready">Ready</option>
-                  <option value="Barang Bekas">Barang bekas</option>
-                </select>
-              </form>
-            </div>
+          <div class="input-group flex justify-between w-full mb-4">
+            <form onSubmit={handleSearch} className="w-5/12 lg:w-72">
+              <input
+                type="text"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+                placeholder="Search product"
+                className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-black focus:outline-none dark:bg-gray-900 dark:text-gray-200 dark:border-gray-900"
+              />
+            </form>
+            <form onChange={selectFilter} className="w-40">
+              <select
+                value={keyFilter}
+                onChange={(e) => setKeyFilter(e.target.value)}
+                className="p-2 w-full rounded dark:bg-gray-900 dark:text-gray-200"
+              >
+                <option value="">All</option>
+                <option value="Pre-Order">Pre-Order</option>
+                <option value="Ready">Ready</option>
+                <option value="Barang Bekas">Barang bekas</option>
+              </select>
+            </form>
+          </div>
         </div>
         <div className="result-count text-left mb-4">
-              <p className="text-lg md:text-xl font-semibold dark:text-gray-300">
-              {getFiltered(filteredData.length)} 
-              </p>
-            </div>
-        
+          <p className="text-md md:text-xl font-semibold dark:text-gray-300">
+            {getFiltered(filteredData.length)}
+          </p>
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
           {filteredData
             ? filteredData.map((item, index) => (
