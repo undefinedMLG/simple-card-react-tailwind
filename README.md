@@ -24,7 +24,7 @@ Ujian Praktik Chapter 2
 - Mamba UI
 
 ## Documentation
-https://raw.githubusercontent.com/setyawannnIMG/simpleCardWeb/main/responsiveDemo.png
+![Responsive](https://raw.githubusercontent.com/setyawannnIMG/simpleCardWeb/main/responsiveDemo.png)
 
 ## Team
 - Prayoga Adi Setyawann [@setyawann](https://www.github.com/setyawannn)
