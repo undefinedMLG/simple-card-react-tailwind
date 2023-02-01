@@ -7,14 +7,7 @@ import SunIcon from "../assets/icons/SunIcon";
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [keyword, setKeyword] = useState("");
   const currentPath = useLocation().pathname;
-
-  useEffect(() => {
-    localStorage.setItem("keyword", keyword);
-  }, [keyword]);
-
-  console.log(keyword);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -66,24 +59,6 @@ const Navbar = () => {
         <div className="flex items-center md:space-x-4">
           <div onClick={toggleDarkMode} className="cursor-pointer mr-2">
             {isDarkMode ? <SunIcon /> : <MoonIcon />}
-          </div>
-          <div className="relative">
-            <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-              <button
-                type="submit"
-                title="Search"
-                className="p-1 focus:outline-none focus:ring"
-              >
-                <SearchIcon />
-              </button>
-            </span>
-            <input
-              onChange={(e) => setKeyword(e.target.value)}
-              type="search"
-              name="Search"
-              placeholder="Search..."
-              className="w-32 py-2 px-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-900 dark:text-gray-100 focus:dark:bg-gray-900"
-            />
           </div>
         </div>
       </div>
