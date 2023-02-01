@@ -1,5 +1,5 @@
 # UNDEFINED
-Ujian Praktik Chapter 2
+Ujian Praktik Chapter 2 - Mengerjakan menggunakan konsep pair programming
 
 ## Technology
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
