@@ -6,22 +6,20 @@ const Feature = () => {
       <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-50">
-            Aliquip definiebas ad est
+            Kami merupakan segala kemampuan yang ada
           </h2>
           <p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">
-            Quando cetero his ne, eum admodum sapientem ut.
+            ------ Query yang berjalan selalu tepat sasaran ------
           </p>
         </div>
         <div>
           <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
             <div className="lg:col-start-2">
               <h3 className="text-2xl font-bold tracking-tight sm:text-3xl dark:text-gray-50">
-                Eam nibh gloriatur ex
+                Keahlian dalan diri kami
               </h3>
               <p className="mt-3 text-lg dark:text-gray-400">
-                Per odio fabellas consulatu cu. Utroque detracto mel ea, quo te
-                latine theophrastus. Ea his tale nibh dissentias, mei exerci
-                tamquam euripidis cu.
+              Pembagian tim sangat berpengaruh untuk membuat sebuah hasil mahakarya yang sangat bagus.dengan itu di butuhkan team work yang sangat baik setiap individunya.
               </p>
               <div className="mt-12 space-y-12">
                 <div className="flex">
@@ -45,12 +43,10 @@ const Feature = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium leading-6 dark:text-gray-50">
-                      Cibo augue offendit has ad
+                      Ciboox.indonesia 
                     </h4>
                     <p className="mt-2 dark:text-gray-400">
-                      An per velit appellantur, ut utinam minimum nominavi sit,
-                      odio nostro habemus ne nec. Ne sonet regione contentiones
-                      est.
+                      Kami merupakan semua bagian dari kemampuan yang nyata dan menjadi satu tim yang OverPower untuk membuat mahakarya.
                     </p>
                   </div>
                 </div>
@@ -75,12 +71,10 @@ const Feature = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium leading-6 dark:text-gray-50">
-                      At eum ferri luptatum lobortis
+                      Apple technology at us
                     </h4>
                     <p className="mt-2 dark:text-gray-400">
-                      Te per quidam maiorum ocurreret, etiam delicatissimi usu
-                      ad. Ne has quod periculis. Te sit primis iisque
-                      efficiantur.
+                     Dia dapan menjadi perusahaan yang OverPower ,dan dalan menjual segala product nya dengan harga yang ga masuk ke thinking.
                     </p>
                   </div>
                 </div>
@@ -105,12 +99,10 @@ const Feature = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium leading-6 dark:text-gray-50">
-                      Dicunt verterem evertitur eu sea
+                      Warren buffet as investor
                     </h4>
                     <p className="mt-2 dark:text-gray-400">
-                      Audire principes rationibus eam an, autem nominavi
-                      luptatum per te. Sumo fabulas vim eu, sonet saperet
-                      eleifend ut vix.
+                    Ia sebagai investo handal juga menjadi sangat OverPower di bidan investing nya,karena ia sudah lebih dari 20 tahun berpengalaman.
                     </p>
                   </div>
                 </div>
