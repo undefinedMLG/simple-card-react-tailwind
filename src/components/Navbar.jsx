@@ -21,10 +21,10 @@ const Navbar = () => {
         <ul className="items-stretch hidden space-x-3 lg:flex">
           <li className="flex">
             <Link
-              to={"/home"}
+              to={"/"}
               rel="noopener noreferrer"
               className={`${
-                currentPath === "/home"
+                currentPath === "/"
                   ? "flex items-center px-4 -mb-1 border-b-2 text-base font-medium border-black dark:text-violet-400 dark:border-violet-400"
                   : "flex items-center px-4 -mb-1 border-b-2 text-base font-medium border-transparent dark:border-transparent"
               }`}
