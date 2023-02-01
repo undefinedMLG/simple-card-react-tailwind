@@ -15,7 +15,13 @@ Ujian Praktik Chapter 2
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Features
+- Search by Keyword
+- Show List Product
+- Sorting by Category 
+- Change mode (Dark mode & Light mode)
 
+## Framework
+- Mamba UI
 
 ## Team
 - Prayoga Adi Setyawann [@setyawann](https://www.github.com/setyawannn)

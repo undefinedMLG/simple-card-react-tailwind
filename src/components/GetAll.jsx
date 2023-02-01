@@ -9,9 +9,7 @@ const GetAll = () => {
   const [keyFilter, setKeyFilter] = useState("");
 
   const fetchGetAll = () => {
-    fetch(
-      "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1f2898db-ceb4-4565-a1eb-2d3beb8a509c/product.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230130%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230130T011141Z&X-Amz-Expires=86400&X-Amz-Signature=5c54ac81b5f292402aa89658001d2818017a1b8974a66bd10b55b61ae955598a&X-Amz-SignedHeaders=host&x-id=GetObject"
-    )
+    fetch(process.env.REACT_APP_API_KEY)
       .then((res) => res.json())
       .then((json) => setDatas(json));
   };
@@ -44,26 +42,25 @@ const GetAll = () => {
   };
 
   const selectFilter = (e) => {
-
-    if (filteredData.length>0) {
+    if (filteredData.length > 0) {
       const filterData = filteredData.filter((e) => {
         return e.category.toLowerCase().includes(keyFilter.toLowerCase());
       });
       setFiltered(filterData);
       setKeyword("");
-    }else if(filteredData.length===0){
+    } else if (filteredData.length === 0) {
       const filterData = datas.filter((e) => {
         return e.category.toLowerCase().includes(keyFilter.toLowerCase());
       });
       setFiltered(filterData);
-      setKeyword("")
+      setKeyword("");
     }
     console.log(filteredData.length);
   };
 
   function getFiltered(filtered) {
-    if(filtered === 0) {
-      return 'Barang tidak ada'
+    if (filtered === 0) {
+      return "Barang tidak ada";
     } else {
       return filtered;
     }
@@ -89,7 +86,7 @@ const GetAll = () => {
                   value={keyFilter}
                   onChange={(e) => setKeyFilter(e.target.value)}
                 >
-                  <option value="#">select filter</option>
+                  <option value="">All</option>
                   <option value="Pre-Order">Pre-Order</option>
                   <option value="Ready">Ready</option>
                   <option value="Barang Bekas">Barang bekas</option>
