@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MoonIcon from "../assets/icons/MoonIcon";
-import SearchIcon from "../assets/icons/SearchIcon";
 import SunIcon from "../assets/icons/SunIcon";
 
 const Navbar = () => {

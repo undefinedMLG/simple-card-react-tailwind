@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Card from "./components/Card";
-import GetAll from "./components/GetAll";
 import Detail from "./pages/Detail";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";

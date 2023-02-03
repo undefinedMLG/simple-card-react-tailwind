@@ -2,14 +2,16 @@ import React from "react";
 
 const Feature = () => {
   return (
-    <section id="feature" className="dark:bg-gray-800 dark:text-gray-100 my-10">
+    <section id="feature" className="dark:bg-gray-800 dark:text-gray-100 my-20">
       <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl dark:text-gray-50">
             Kami merupakan segala kemampuan yang ada
           </h2>
           <p className="max-w-3xl mx-auto mt-4 text-xl text-center dark:text-gray-400">
-            ------ Query yang berjalan selalu tepat sasaran ------
+            Tim yang saling percaya dan dapat dipercaya adalah tim yang
+            sebenarnya, jangan pernah buat kecewa tim mu dan percayalah bahwa
+            kamu bisa diandalkan oleh tim mu
           </p>
         </div>
         <div>
@@ -19,7 +21,9 @@ const Feature = () => {
                 Keahlian dalan diri kami
               </h3>
               <p className="mt-3 text-lg dark:text-gray-400">
-              Pembagian tim sangat berpengaruh untuk membuat sebuah hasil mahakarya yang sangat bagus.dengan itu di butuhkan team work yang sangat baik setiap individunya.
+                Pembagian tim sangat berpengaruh untuk membuat sebuah hasil
+                mahakarya yang sangat bagus.dengan itu di butuhkan team work
+                yang sangat baik setiap individunya.
               </p>
               <div className="mt-12 space-y-12">
                 <div className="flex">
@@ -43,10 +47,11 @@ const Feature = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium leading-6 dark:text-gray-50">
-                      Ciboox.indonesia 
+                      Ciboox.indonesia
                     </h4>
                     <p className="mt-2 dark:text-gray-400">
-                      Kami merupakan semua bagian dari kemampuan yang nyata dan menjadi satu tim yang OverPower untuk membuat mahakarya.
+                      Kami merupakan semua bagian dari kemampuan yang nyata dan
+                      menjadi satu tim yang OverPower untuk membuat mahakarya.
                     </p>
                   </div>
                 </div>
@@ -74,7 +79,9 @@ const Feature = () => {
                       Apple technology at us
                     </h4>
                     <p className="mt-2 dark:text-gray-400">
-                     Dia dapan menjadi perusahaan yang OverPower ,dan dalan menjual segala product nya dengan harga yang ga masuk ke thinking.
+                      Dia dapan menjadi perusahaan yang OverPower ,dan dalan
+                      menjual segala product nya dengan harga yang ga masuk ke
+                      thinking.
                     </p>
                   </div>
                 </div>
@@ -102,7 +109,9 @@ const Feature = () => {
                       Warren buffet as investor
                     </h4>
                     <p className="mt-2 dark:text-gray-400">
-                    Ia sebagai investo handal juga menjadi sangat OverPower di bidan investing nya,karena ia sudah lebih dari 20 tahun berpengalaman.
+                      Ia sebagai investo handal juga menjadi sangat OverPower di
+                      bidan investing nya,karena ia sudah lebih dari 20 tahun
+                      berpengalaman.
                     </p>
                   </div>
                 </div>
