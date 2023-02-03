@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import data from "../assets/data/product.json";
+
 
 function Detail() {
   const [datas, setDatas] = useState([]);
@@ -7,15 +9,13 @@ function Detail() {
   const { id_barang } = useParams();
 
   const fetchGetAll = () => {
-    fetch(
-      process.env.REACT_APP_API_KEY    )
-      .then((res) => res.json())
-      .then((json) => setDatas(json));
+    setDatas(data)
   };
 
   useEffect(() => {
     fetchGetAll();
   }, []);
+  
   console.log(datas);
   console.log(id_barang);
 
