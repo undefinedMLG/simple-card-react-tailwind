@@ -1,5 +1,5 @@
 # UNDEFINED
-Ujian Praktik Chapter 2
+Ujian Praktik Chapter 2 - Website e-commerce yang menawarkan kemudahan dan kenyamanan dalam belanja karena anda dapat melakukan transaksi dimanapun dan kapanpun
 
 ## Technology
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -22,6 +22,9 @@ Ujian Praktik Chapter 2
 
 ## Framework
 - Mamba UI
+
+## Documentation
+![Responsive](https://raw.githubusercontent.com/setyawannnIMG/simpleCardWeb/main/responsiveDemo.png)
 
 ## Team
 - Prayoga Adi Setyawann [@setyawann](https://www.github.com/setyawannn)
