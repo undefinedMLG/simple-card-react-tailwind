@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import NavFo from "../layouts/NavFo";
+import data from "../assets/data/product.json";
 
 //FETCH API GET ALL DATA
 const Products = () => {
@@ -11,9 +12,7 @@ const Products = () => {
   const [keyFilter, setKeyFilter] = useState("");
 
   const fetchGetAll = () => {
-    fetch(process.env.REACT_APP_API_KEY)
-      .then((res) => res.json())
-      .then((json) => setDatas(json));
+    setDatas(data)
   };
 
   useEffect(() => {
